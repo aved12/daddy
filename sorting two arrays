@@ -1,0 +1,46 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+
+class GFG 
+{
+	public static void main (String[] args) 
+	{
+      Scanner s=new Scanner(System.in);
+      int a=s.nextInt();
+      int b=s.nextInt();
+      int i=0,j=0,k=0;
+      int ar1[]=new int[a];
+      int ar2[]=new int[b];
+      int ar3[]=new int[a+b];
+      for(int x=0;x<a;x++)
+      {
+          ar1[x]=s.nextInt();
+      }
+      for(int x=0;x<b;x++)
+      {
+          ar2[x]=s.nextInt();
+      }
+      while(i<a && j<b)
+      {
+          if(ar1[i]<ar2[j])
+          {
+              ar3[k++]=ar1[i++];
+          }
+          else
+          {
+              ar3[k++]=ar2[j++];
+          }
+      }
+      while(i<a)
+      {
+          ar3[k++]=ar1[i++];
+      }
+      while(j<b)
+      {
+          ar3[k++]=ar2[j++];
+      }
+      System.out.print(Arrays.toString(ar3));
+	}
+}
