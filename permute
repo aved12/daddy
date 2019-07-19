@@ -1,0 +1,27 @@
+import java.util.*;
+import java.io.*;
+
+class Permutations
+{
+	public static void per(String c, String r)
+	{
+		if (r.length() == 0) 
+		{
+			System.out.print(c+" ");
+		}
+
+		for (int i = 0; i < r.length(); i++)
+		{
+			String newC = c + r.charAt(i);
+			String newR = r.substring(0, i) +
+								  r.substring(i + 1);
+
+			per(newC, newR);
+		}
+	}
+	public static void main(String[] args)
+	{  Scanner sc=new Scanner(System.in);
+		String s =sc.next(); 
+		per("", s);
+	}
+}
