@@ -1,0 +1,15 @@
+num=0
+one=["zero", "one", "two", "three",  "four", "five", "six", "seven",  "eight", "nine"]
+teens=["ten", "eleven", "twelve","thirteen", "fourteen", "fifteen",  "sixteen", "seventeen", "eighteen", "nineteen"]
+tens=["", "", "twenty", "thirty", "fourty","fifty", "sixty", "seventy", "eighty",  "ninety"]
+r=num%10
+t=num//10
+if(num//10==0):
+    ans=one[num]
+    print(ans)
+if(num//10>1):
+    ans=tens[t]+" "+one[r]
+    print(ans)
+if(num//10==1):
+    ans=teens[r]
+    print(ans)
