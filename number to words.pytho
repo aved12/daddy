@@ -1,15 +1,20 @@
-num=0
+num=999
 one=["zero", "one", "two", "three",  "four", "five", "six", "seven",  "eight", "nine"]
 teens=["ten", "eleven", "twelve","thirteen", "fourteen", "fifteen",  "sixteen", "seventeen", "eighteen", "nineteen"]
 tens=["", "", "twenty", "thirty", "fourty","fifty", "sixty", "seventy", "eighty",  "ninety"]
 r=num%10
 t=num//10
+g=t//10
+f=t%10
 if(num//10==0):
     ans=one[num]
     print(ans)
-if(num//10>1):
+if(num//10<10 and num//10>1):
     ans=tens[t]+" "+one[r]
     print(ans)
 if(num//10==1):
     ans=teens[r]
+    print(ans)
+if(g!=0):
+    ans=one[g]+" "+"hundred and"+" "+tens[f]+" "+one[r]
     print(ans)
