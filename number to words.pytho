@@ -28,7 +28,7 @@ if(g!=0 and c==0):
     if(r!=0 and f>0):
         ans=one[g]+" "+"hundred and"+" "+tens[f]+" "+one[r]
         print(ans)
-    elif(f==1 and r!=0):
+    elif(f==1 and r>=0):
         ans=one[g]+" "+"hundred and"+" "+teens[r]
         print(ans)    
     elif(f==0 and r!=0):
