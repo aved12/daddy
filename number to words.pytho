@@ -1,20 +1,40 @@
-num=999
+num=10000
 one=["zero", "one", "two", "three",  "four", "five", "six", "seven",  "eight", "nine"]
 teens=["ten", "eleven", "twelve","thirteen", "fourteen", "fifteen",  "sixteen", "seventeen", "eighteen", "nineteen"]
 tens=["", "", "twenty", "thirty", "fourty","fifty", "sixty", "seventy", "eighty",  "ninety"]
+#finding one's position
 r=num%10
+#finding ten's position
 t=num//10
+#finding 100's position
 g=t//10
 f=t%10
-if(num//10==0):
+#findind whether fouth digit avilable or not 
+c=g//10
+#finding ones
+if(num//10==0): 
     ans=one[num]
     print(ans)
+#finding tens    
 if(num//10<10 and num//10>1):
     ans=tens[t]+" "+one[r]
     print(ans)
+#finding teens    
 if(num//10==1):
     ans=teens[r]
     print(ans)
-if(g!=0):
-    ans=one[g]+" "+"hundred and"+" "+tens[f]+" "+one[r]
-    print(ans)
+#finding hundreds    
+if(g!=0 and c==0):
+    if(r!=0 and f!=0):
+        ans=one[g]+" "+"hundred and"+" "+tens[f]+" "+one[r]
+        print(ans)
+    elif(f==0 and r!=0):
+        ans=one[g]+" "+"hundred and"+" "+one[r]
+        print(ans)
+    elif(r==0 and f==0):
+        ans=one[g]+" "+"hundred"
+        print(ans)
+if(num==1000):
+    print("thousand")
+if(num>1000):
+    print("-1")
