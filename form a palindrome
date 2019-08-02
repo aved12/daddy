@@ -1,0 +1,20 @@
+n=int(input())
+f=1
+if(n>=1 and n<=9):
+    print(n+n)
+else:
+    while(f==1):
+        a=n
+        b=a
+        x=0
+        while(a!=0):
+            r=a%10
+            a=a//10
+            x=x*10+r
+        if(x==b):
+            print(b)
+            f=0
+        else:
+            c=x+b
+            n=c
+            f=1
