@@ -1,0 +1,16 @@
+n = str(input())
+m=list(n)
+r=len(m)-1
+l=0
+while(l<r):
+    if not m[r].isalpha():
+        r-=1
+    elif not m[l].isalpha():
+        l+=1
+    else:
+        temp=m[r]
+        m[r]=m[l]
+        m[l]=temp
+        l+=1
+        r-=1
+print(''.join(m))        
