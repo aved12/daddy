@@ -1,0 +1,53 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+
+class pd 
+{
+	public static void main (String[] args) 
+	{
+		Scanner s=new Scanner(System.in);
+		int d=s.nextInt();
+		for(int j=0;j<d;j++)
+		{
+		    int a=s.nextInt();
+		    int b[]=new int[a];
+		    int x[]=new int[a];
+		    int y[]=new int[a];
+		    for(int i=0;i<a;i++)
+		    {
+		        b[i]=s.nextInt();
+		    }
+		    for(int i=0;i<a;i++)
+		    {
+		        x[i]=b[i];
+		    }
+            Arrays.sort(b);
+            for(int i=0;i<a;i++)
+		    {
+		        y[i]=b[i];
+		    }
+            if(Arrays.equals(x,y))
+            {
+                System.out.print(1);
+            }
+            else
+            {
+                System.out.print(0);
+            }
+		    System.out.println();
+		}
+	}
+}
+
+Input
+2
+5
+10 20 30 40 50
+6
+90 80 100 70 40 30
+
+Output
+1
+0
