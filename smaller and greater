@@ -1,0 +1,46 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG 
+{
+	public static void main (String[] args) 
+	{
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		for(int j=0;j<n;j++)
+		{
+		    int a=s.nextInt(),b=s.nextInt(),greater=0,smaller=0;
+		    int c[]=new int[a];
+		    for(int i=0;i<a;i++)
+		    {
+		        c[i]=s.nextInt();
+		    }
+		    for(int i=0;i<a;i++)
+		    {
+		        if(c[i]>=b)
+		        {
+		            greater++;
+		        }
+		        if(c[i]<=b)
+		        {
+		            smaller++;
+		        }
+		    }
+		    System.out.print(smaller+" "+greater);
+		    System.out.println();
+		}
+	}
+}
+
+For Input:
+2
+7 0
+1 2 8 10 11 12 19
+7 5
+1 2 8 10 11 12 19
+Your Output is:
+0 7
+2 5
