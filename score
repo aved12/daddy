@@ -1,0 +1,56 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG 
+{
+	public static void main (String[] args) 
+	{
+		Scanner s=new Scanner(System.in);
+		int a=s.nextInt();
+		for(int i=0;i<a;i++)
+		{
+		    int b[]=new int[3],as=0,bs=0;
+		    int c[]=new int[3];
+		    for(int j=0;j<b.length;j++)
+		    {
+                b[j]=s.nextInt();
+		    }
+		    for(int j=0;j<b.length;j++)
+		    {
+                c[j]=s.nextInt();
+		    }
+		    for(int j=0;j<b.length;j++)
+		    {
+		        if(b[j]>c[j])
+		        {
+		            as++;
+		        }
+		        else if(b[j]==c[j])
+		        {
+		            as+=0;
+		            bs+=0;
+		        }
+		        else
+		        {
+		            bs++;
+		        }
+		    }
+		    System.out.print(as+" "+bs);
+		    System.out.println();
+		}
+	}
+}
+
+
+For Input:
+2
+4 2 7
+5 2 8
+1804289384 846930887 1681692778
+1714636916 1957747794 424238336
+Output of Online Judge is:
+0 2
+2 1
