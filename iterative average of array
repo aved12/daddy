@@ -1,0 +1,41 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG 
+{
+	public static void main (String[] args) 
+	{
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		for(int j=0;j<n;j++)
+		{
+		    int a=s.nextInt(),c=0,d=0,av=0;
+		    int b[]=new int[a];
+		    for(int i=0;i<a;i++)
+		    {
+		        b[i]=s.nextInt();
+		    }
+		    for(int i=0;i<a;i++)
+		    {
+		        c+=b[i];
+		        d++;
+		        av=c/d;
+		        System.out.print(av+" ");
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+For Input:
+2
+5
+10 20 30 40 50
+2
+12 2
+Your Output is:
+10 15 20 25 30 
+12 7
