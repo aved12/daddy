@@ -1,0 +1,51 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+
+class pd 
+{
+	public static void main (String[] args) 
+	{
+		Scanner s=new Scanner(System.in);
+		int d=s.nextInt();
+		for(int j=0;j<d;j++)
+		{
+		    int a=s.nextInt(),temp=0;
+		    int b[]=new int[a];
+		    for(int i=0;i<a;i++)
+		    {
+		        b[i]=s.nextInt();
+		    }
+		    int y[]=new int[a];
+            for(int i=0;i<a;i++)
+            {
+                y[i]=b[i];
+            }
+            for(int i=0;i<a/2;i++)
+            {
+                temp=b[i];
+                b[i]=b[a-1-i];
+                b[a-1-i]=temp;
+            }
+		    if(Arrays.equals(b,y))
+		    {
+		        System.out.println("PERFECT");
+		    }
+		    else
+		    {
+		        System.out.println("NOT PERFECT");
+		    }
+		}
+	}
+}
+
+Input:
+2
+5
+1 2 3 2 1
+5
+1 2 3 4 5
+Output:
+PERFECT
+NOT PERFECT
