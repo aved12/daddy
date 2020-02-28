@@ -1,0 +1,58 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+
+class GFG 
+{
+	public static void main (String[] args)
+	{
+	    Scanner s=new Scanner(System.in);
+	    int a=s.nextInt();
+        for(int j=0;j<a;j++)
+        {
+            int b=s.nextInt(),x=0,y=0,z=0;
+            int c[]=new int[b];
+            for(int i=0;i<b;i++)
+            {
+                c[i]=s.nextInt();
+            }
+            if(b>2)
+            {
+                for(int i=0;i<b/2;i++)
+                {
+                    x+=c[i];
+                }
+                for(int i=b/2;i<b;i++)
+                {
+                    y+=c[i];
+                }
+                z=Math.abs(x-y);
+            }
+            else
+            {
+                x=c[0];
+                y=c[1];
+                z=Math.abs(x-y);
+            }
+            System.out.println(z);
+        }
+	}
+}
+
+
+Example:
+Input:
+2
+6
+1 2 1 2 1 3
+2
+20 10
+
+Output:
+2
+10
+
+Explanation:
+Suppose, we have an array 1 2 1 2 1 3. The Sum of first three elements is 1 + 2 + 1 = 4 and sum of last three elements is 2 + 1 + 3 = 6
+So this is unbalanced, to make it balanced the minimum number we can add is 2 to any element in first half.
