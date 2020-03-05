@@ -1,0 +1,62 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+
+class GFG {
+	public static void main (String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		for(int j=0;j<a;j++)
+		{
+		    String b=sc.next();
+		    if(b.charAt(0)==b.charAt(1))  
+		    {
+		            System.out.println("DRAW");
+		    }
+		    if(b.charAt(0)=='S' && b.charAt(1)== 'P')
+		    {
+		        System.out.println("A");
+		    }
+		    if(b.charAt(0)=='R' && b.charAt(1)== 'S')
+		    {
+		        System.out.println("A");
+		    }
+		    if(b.charAt(0)=='P' && b.charAt(1)== 'R')
+		    {
+		        System.out.println("A");
+		    }
+		    if(b.charAt(0)=='P' && b.charAt(1)== 'S')
+		    {
+		        System.out.println("B");
+		    }
+		    if(b.charAt(0)=='S' && b.charAt(1)== 'R')
+		    {
+		        System.out.println("B");
+		    }
+		    if(b.charAt(0)=='R' && b.charAt(1)== 'P')
+		    {
+		        System.out.println("B");
+		    }
+		}
+	}
+}
+
+Input:
+7
+RR
+RS
+SR
+SP
+PP
+PS
+RP
+Output:
+DRAW
+A
+B
+A
+DRAW
+B
+B
