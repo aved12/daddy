@@ -1,0 +1,39 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+
+class GFG 
+{
+	public static void main (String[] args) 
+	{
+	    Scanner s=new Scanner(System.in);
+	    int a=s.nextInt();
+	    for(int k=0;k<a;k++)
+	    {
+	        int b=s.nextInt();
+	        int c[]=new int[b];
+	        for(int i=0;i<b;i++)
+	        {
+	            c[i]=s.nextInt();
+	        }
+	        Arrays.sort(c);
+	        int d=s.nextInt();
+	        System.out.println(c[d-1]);
+	    }
+		
+	}
+}
+
+Example:
+Input:
+2
+6
+7 10 4 3 20 15
+3
+5
+7 10 4 20 15
+4
+Output:
+7
+15
